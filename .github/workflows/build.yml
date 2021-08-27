@@ -1,0 +1,41 @@
+name: Build ediq
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - '**'
+    paths-ignore:
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README*'
+  pull_request:
+    paths-ignore:
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build with Maven
+
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+
+      - uses: actions/setup-java@v1.3.0
+        name: Setup JDK
+        with:
+          java-version: 11
+
+      - name: Cache Maven packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Maven build
+        run: mvn -B verify package
