@@ -1,4 +1,4 @@
-package com.freighttrust.ediq;
+package network.as2.ediq;
 
 import java.io.File;
 import java.io.FileInputStream;

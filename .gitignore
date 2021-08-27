@@ -3,3 +3,9 @@
 /.settings/
 /target/
 /dependency-reduced-pom.xml
+target/
+.DS_Store
+node_modules
+*.tar.gz
+*.tgz
+*.zip

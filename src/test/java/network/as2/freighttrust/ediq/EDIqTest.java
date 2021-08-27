@@ -1,4 +1,4 @@
-package com.freighttrust.ediq;
+package network.as2.ediq;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

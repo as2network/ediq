@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.freighttrust</groupId>
+  <groupId>network.as2</groupId>
   <artifactId>ediq</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>ediq - Command Line EDI Processor</name>
@@ -38,7 +38,7 @@
           <configuration>
             <archive>
               <manifestEntries>
-                <Main-Class>com.freighttrust.ediq.EDIq</Main-Class>
+                <Main-Class>network.as2.ediq.EDIq</Main-Class>
               </manifestEntries>
             </archive>
           </configuration>
@@ -64,7 +64,7 @@
               <minimizeJar>true</minimizeJar>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>com.freighttrust.ediq.EDIq</mainClass>
+                  <mainClass>network.as2.ediq.EDIq</mainClass>
                 </transformer>
               </transformers>
             </configuration>
