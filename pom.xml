@@ -103,7 +103,7 @@
     <dependency>
       <groupId>io.xlate</groupId>
       <artifactId>staedi</artifactId>
-      <version>1.12.0</version>
+      <version>1.19.0</version>
     </dependency>
 
     <dependency>
